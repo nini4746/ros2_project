@@ -1,2 +1,20 @@
-System Start
-Sensor Active
+[2024-05-20 12:00:00] INFO: Sensor value = 75.8
+[2024-05-20 12:00:01] INFO: Sensor value = 78.4
+[2024-05-20 12:00:02] INFO: Sensor value = 85.0
+[2024-05-20 12:00:03] INFO: Sensor value = 70.8
+[2024-05-20 12:00:04] INFO: Sensor value = 99.7
+[2024-05-20 12:00:05] INFO: Sensor value = 84.1
+[2024-05-20 12:00:06] INFO: Sensor value = 52.7
+[2024-05-20 12:00:07] INFO: Sensor value = 53.6
+[2024-05-20 12:00:08] INFO: Sensor value = 52.1
+[2024-05-20 12:00:09] INFO: Sensor value = 88.1
+[2024-05-20 12:00:10] INFO: Sensor value = 54.8
+[2024-05-20 12:00:11] INFO: Sensor value = 55.7
+[2024-05-20 12:00:12] INFO: Sensor value = 85.3
+[2024-05-20 12:00:13] INFO: Sensor value = 57.0
+[2024-05-20 12:00:14] INFO: Sensor value = 89.1
+[2024-05-20 12:00:15] INFO: Sensor value = 82.8
+[2024-05-20 12:00:16] INFO: Sensor value = 83.3
+[2024-05-20 12:00:17] INFO: Sensor value = 96.1
+[2024-05-20 12:00:18] INFO: Sensor value = 66.1
+[2024-05-20 12:00:19] INFO: Sensor value = 76.5

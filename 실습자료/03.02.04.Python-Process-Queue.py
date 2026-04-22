@@ -17,7 +17,7 @@ def ai_inference_worker(sensor_queue, stop_event):
     while not stop_event.is_set():
         try:
             data = sensor_queue.get(timeout=1)
-            print(f"[AI] 데이터 {data:.2f} 분석 중...")
+            print(f"[AI] 데이터 {sensor_queue.qsize()}  /{data:.2f} 분석 중...")
             time.sleep(0.2)  # 무거운 AI 연산 시뮬레이션
             print(f"[AI] 결과: 장애물 없음")
         except:
@@ -32,11 +32,13 @@ if __name__ == '__main__':
     # 프로세스 객체 생성
     p1 = multiprocessing.Process(
             target=sensor_worker, args=(sensor_q, stop_sig))
-    p2 = multiprocessing.Process(
+    p2 = [multiprocessing.Process(
             target=ai_inference_worker, args=(sensor_q, stop_sig))
+            for _ in range(30)]
 
     p1.start()
-    p2.start()
+    for p in p2:
+        p.start()
 
     try:
         time.sleep(2)  # 2초 동안 실행 (실습 편의상 단축)
@@ -45,5 +47,6 @@ if __name__ == '__main__':
     finally:
         stop_sig.set()   # 종료 신호 전송
         p1.join()
-        p2.join()
+        for p in p2:
+            p.join()
         print("모든 시스템이 안전하게 종료되었습니다.")
