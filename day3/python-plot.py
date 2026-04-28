@@ -1,4 +1,3 @@
-02.03.Python-Plot.py
 # sudo apt install python3-tk
 import matplotlib
 matplotlib.use('TkAgg')   # 또는 'Qt5Agg'

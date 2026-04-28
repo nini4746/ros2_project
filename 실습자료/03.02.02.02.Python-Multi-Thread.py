@@ -7,7 +7,7 @@ data_lock = threading.Lock()
 
 def read_lidar():
     for i in range(1000):
-        with data_lock:
+        # with data_lock:
             counter = robot_telemetry["counter"]
             counter += 1
             time.sleep(0.01)
@@ -15,7 +15,7 @@ def read_lidar():
 
 def read_ultrasonic():
     for i in range(1000):
-        with data_lock:
+        # with data_lock:
             counter = robot_telemetry["counter"]
             counter += 1
             time.sleep(0.01)
