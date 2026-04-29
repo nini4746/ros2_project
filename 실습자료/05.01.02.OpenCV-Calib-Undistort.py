@@ -21,7 +21,7 @@ import os
 
 # %%
 CAMERA_INDEX   = 0
-YAML_PATH      = "camera_info.yaml"
+YAML_PATH      = "./실습자료/camera_info.yaml"
 
 # 05.01.01.OpenCV-Calib-Capture.py 와 동일한 합성 왜곡 설정
 USE_DISTORTION = True
