@@ -34,7 +34,7 @@ class SimpleKalman:
                 [[np.float32(coord_x)],
                  [np.float32(coord_y)],
                  [0],
-                 [0]], np.float32
+                 [0]], np.float32ㅋ
             )
             self.initialized = True
 
@@ -49,8 +49,8 @@ MODEL_PATH = SCRIPT_DIR / "yolov8n.pt"
 model = YOLO(str(MODEL_PATH if MODEL_PATH.exists() else "yolov8n.pt"))
 
 # %%
-# TODO: camera_info.yaml 에서 캘리브레이션 파라미터를 로드하고
-#       camera_matrix, dist_coeffs 를 numpy 배열로 만드세요.
+# camera_info.yaml 에서 캘리브레이션 파라미터를 로드하고
+# camera_matrix, dist_coeffs 를 numpy 배열로 변환합니다.
 YAML_PATH = SCRIPT_DIR / "camera_info.yaml"
 if not YAML_PATH.exists():
     raise FileNotFoundError(f"캘리브레이션 파일이 없습니다: {YAML_PATH}")
